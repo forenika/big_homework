@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaldea Live - 迦勒底特别情报放送局</title>
+    <link rel="icon" type="image/png" href="images/迦勒底.png">
+    <link rel="stylesheet" href="css/live.css">
+</head>
+<body>
+
+    <div id="live-room-container">
+        <div class="live-room-header">
+            <a href="index.html" id="back-to-home-btn">← 返回首页</a>
+            <h2>🔴 【Chaldea Live】迦勒底特别情报放送局</h2>
+        </div>
+        
+        <div class="live-main-content">
+            <div class="live-player-area">
+                <div class="video-placeholder">
+                    <img src="images/迦勒底.png" alt="Logo" class="player-bg-logo">
+                    <p>📡 直播信号准备中... 请在右侧互动</p>
+                </div>
+            </div>
+            
+            <div class="live-sidebar">
+                <div class="sidebar-tabs">
+                    <span class="tab-item active">互动弹幕</span>
+                    <span class="tab-item">SuperChat (SC)</span>
+                </div>
+                
+                <div class="chat-display-area" id="chat-box">
+                    <div class="chat-msg system">系统提示：欢迎来到迦勒底直播间，请文明发言。</div>
+                    <div class="chat-msg"><span class="user-name">月之公主_Official:</span> 幻上好！能看到画面吗？</div>
+                    <div class="chat-msg sc-msg-preview" style="--sc-color: #e91e63;">
+                        <div class="sc-head"><b>胡子骑士</b> 5000QP</div>
+                        <div class="sc-body">公主殿幻上好——！</div>
+                    </div>
+                </div>
+                
+                <div class="live-input-panel">
+                    <div class="input-row">
+                        <input type="text" id="danmu-input" placeholder="发条弹幕说些什么吧~" maxlength="30">
+                        <button id="send-danmu-btn">发送</button>
+                    </div>
+                    <div class="gift-row">
+                        <button class="sc-btn" data-amount="30" style="background: #00e5ff;">💰 SC 300QP</button>
+                        <button class="sc-btn" data-amount="100" style="background: #ffb300;">🔥 SC 1000QP</button>
+                        <button class="sc-btn" data-amount="500" style="background: #e91e63;">💎 SC 5000QP</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatBox = document.getElementById('chat-box');
+            const danmuInput = document.getElementById('danmu-input');
+            const sendDanmuBtn = document.getElementById('send-danmu-btn');
+
+            // ================= 🆕 模拟登录状态控制 =================
+            // 默认设置为未登录（游客状态）：false
+            // 如果想测试登录后的效果，可以在演示时把它改成 true，或者用我们下面建的切换按钮
+            let isLoggedIn = false; 
+
+            // 为了方便你测试，我们在直播间头部动态塞入一个“切换登录状态”的测试按钮
+            const header = document.querySelector('.live-room-header');
+            const testBtn = document.createElement('button');
+            testBtn.style.cssText = "padding: 6px 12px; background: #2f3e46; color: #fff; border: 1px solid #64748b; border-radius: 6px; cursor: pointer; margin-left: auto; font-size: 12px;";
+            testBtn.innerText = "⚙️ 当前状态：游客 (点击切换登录)";
+            header.appendChild(testBtn);
+
+            // 点击按钮切换登录状态（答辩演示神器）
+            testBtn.addEventListener('click', function() {
+                isLoggedIn = !isLoggedIn;
+                if (isLoggedIn) {
+                    testBtn.innerText = "✅ 当前状态：已登录 (御主)";
+                    testBtn.style.background = "#2e7d32";
+                } else {
+                    testBtn.innerText = "⚙️ 当前状态：游客 (点击切换登录)";
+                    testBtn.style.background = "#2f3e46";
+                }
+            });
+            // ========================================================
+
+
+            // 发送普通弹幕
+            function sendDanmu() {
+                const text = danmuInput.value.trim();
+                if (!text) return;
+
+                // 🆕 核心改动：根据是否登录，决定弹幕发送者的名字
+                let userName = "游客A";
+                if (isLoggedIn) {
+                    userName = "藤丸立香 (你)";
+                }
+
+                const msgDiv = document.createElement('div');
+                msgDiv.className = 'chat-msg';
+                msgDiv.innerHTML = `<span class="user-name" style="${!isLoggedIn ? 'color: #a0aec0;' : ''}">${userName}:</span> ${text}`;
+                
+                chatBox.appendChild(msgDiv);
+                danmuInput.value = ''; 
+                chatBox.scrollTop = chatBox.scrollHeight; 
+            }
+
+            sendDanmuBtn.addEventListener('click', sendDanmu);
+            danmuInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') sendDanmu();
+            });
+
+
+            // 发送 SC (SuperChat)
+            document.querySelectorAll('.sc-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // 🆕 核心改动：如果没登录，拦截操作并提示
+                    if (!isLoggedIn) {
+                        // 1. 在弹幕区塞一条红色系统警告
+                        const alertDiv = document.createElement('div');
+                        alertDiv.className = 'chat-msg system';
+                        alertDiv.style.color = '#ef4444';
+                        alertDiv.style.fontWeight = 'bold';
+                        alertDiv.innerText = "❌ 提示：游客状态无法发送 SuperChat，请先登录账户！";
+                        chatBox.appendChild(alertDiv);
+                        chatBox.scrollTop = chatBox.scrollHeight;
+
+                        // 2. 同时弹窗提醒
+                        alert("您当前处于游客状态，请登录后再发表 SuperChat 留言！");
+                        return; // 结束函数，不执行后面的发 SC 逻辑
+                    }
+
+                    // 如果已登录，正常执行发送 SC
+                    const amount = this.getAttribute('data-amount');
+                    let color = '#ffb300'; 
+                    if (amount === '30') color = '#00e5ff'; 
+                    if (amount === '500') color = '#e91e63'; 
+
+                    const scDiv = document.createElement('div');
+                    scDiv.className = 'chat-msg sc-msg-preview';
+                    scDiv.style.setProperty('--sc-color', color);
+                    scDiv.innerHTML = `
+                        <div class="sc-head"><b>御主 (你)</b> ￥${amount}</div>
+                        <div class="sc-body">公主殿，幻上好——！</div>
+                    `;
+                    
+                    chatBox.appendChild(scDiv);
+                    chatBox.scrollTop = chatBox.scrollHeight;
+                });
+            });
+        });
+    </script>
+</body>
+</html>

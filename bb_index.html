@@ -1,0 +1,1756 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BB Channel-BB亲充满爱意的频道</title>
+    
+    <!-- 设置网站图标（favicon） -->
+    <link rel="icon" type="image/png" href="images/BB_标志1.png">
+    <link rel="shortcut icon" type="image/png" href="images/BB_标志1.png">
+    
+    <!-- 引入外部CSS文件 -->
+    <link rel="stylesheet" href="css/bb_web.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        body {
+            background-color: #120116;
+            padding: 0;
+            margin: 0;
+            display: block;
+            overflow-x: hidden;
+        }
+
+        .top-blue-bar {
+            width: 100%;
+            height: 90px; /* 修改：从60px增加到90px，避免图片溢出 */
+            background-color: rgb(252, 13, 168);
+            margin: 0;
+            padding: 0;
+            border: none;
+            display: block;
+            position: relative;
+        }
+        
+        /* 修复图片高度和定位 */
+        .logo-img {
+            height: 70px;
+            width: 70px;
+            display: block;
+            object-fit: contain; /* 保证图片比例 */
+        }
+
+        /* 优化移动端显示 */
+        @media (max-width: 768px) {
+            .channel-name {
+                font-size: 20px !important;
+            }
+            .nav-link {
+                font-size: 14px !important;
+            }
+            .nav-left {
+                gap: 8px !important;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="top-blue-bar">
+        <!-- 左侧图片 -->
+        <div class="nav-left">
+            <img src="images/月之背面.png" alt="mooncell" class="logo-img">
+            <span class="channel-name">BB Official Channel</span>
+        </div>
+        <!-- 右侧登录注册 -->
+        <div class="nav-right">
+            <a href="#" class="nav-link">登录</a>
+            <a href="#" class="nav-link">注册</a>
+        </div>
+    </div>
+
+
+
+    <!-- 滚动报幕区域 -->
+    <div class="news-ticker">
+        <div class="ticker-container">
+            <div class="ticker-content" id="tickerContent">
+                <span class="news-item">📢 欢迎来到BB Channel——！各位可怜虫！原本的迦勒底频道已由BB亲全部接管，请尽情地享受这个频道噢♡</span>
+                <span class="news-separator">✦</span>
+                <span class="news-item">身为迦勒底的头脑，那个列奥纳多.达芬奇竟然在大半夜......为了人理的未来熬了个通宵呢！哎呀，好像看到了屏幕前的各位失望的表情呢</span>
+                <span class="news-separator">✦</span>
+                <span class="news-item">6月1日前一日，戈尔德鲁夫所长为了给御主和孩童从者们庆祝儿童节，忙得时不时掏出胃药来服用，这种可悲样简直让人想偷偷地把准备好的东西全.部.破.坏掉呢♡</span>
+                <span class="news-separator">✦</span>
+                <span class="news-item">近日举办的蘑菇宴，Lip参加完回来后居然说：“大家貌似都经历了些不好的事，不过宴会上我们相处的很开心噢”，据说后面她们吃烤蘑菇吃了个爽，后续因为魔力高涨还引发了规模不小的特异点</span>
+                <span class="news-separator">✦</span>
+                <span class="news-item">最近，某从者在迦勒底闲逛时意外地发现一间很可疑的房间，据本人说：“恶！这是什么，看上去好阴沉好诡异！房间上怎么挂满关于御主的影像”这事在迦勒底引起了一阵讨论，不过后来再也没有人见过那个房间。</span>
+                <span class="news-separator">✦</span>
+                <span class="news-item">因情人节的缘故，大家早在2月14日到来之前抓紧了回礼和收礼的特训，看到大家这么努力的样子，真是让人心动呢！不过，有点让人意外的是巧克力烹饪特训课的老师居然是御主本人</span>
+                <span class="news-separator">✦</span>
+                <span class="news-item">由BB亲亲自制作的BB老虎机终于要开始预售了！各位，请做好陷于金钱与欲望的极致深渊的准备吧♡</span>
+                <span class="news-separator">✦</span>
+                <span class="news-item">BB亲提醒您，一定要小心网站上来路不明的商品销售信息，以免造成损失噢~！</span>
+                <span class="news-separator">✦</span>
+                <span class="news-item">BB我是辅佐于人类的超规格作弊AI，虽说打心底地瞧不起大家，不过BB亲一直都深深地爱着大家，呵呵</span>
+                <span class="news-separator">✦</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 轮播图和功能块行容器 -->
+    <div class="content-row">
+        <!-- 轮播图区域 -->
+        <div class="carousel-section">
+            <div class="carousel-container">
+                <div class="carousel-wrapper" id="carouselWrapper">
+
+                    <div class="carousel-slide">
+                        <a href="bb_live.html">
+                            <img src="images/轮换_BB直播.png" alt="直播间">
+                        </a>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <img src="images/轮换_午间剧.png" alt="午间剧">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- 功能矩形块区域 -->
+        <div class="feature-grid">
+            <div class="feature-item feature-green">
+                <div class="weather-text">
+                    <div class="weather-title">今日天气</div>
+                    <div class="weather-info">☀️ 超级晴朗</div>
+                </div>
+            </div>
+            <div class="feature-item feature-blue">
+                <div class="zhanbu-text">
+                    <div class="weather-title">今日占卜</div>
+                    <div class="weather-info">戴着蝴蝶结会更幸运噢</div>
+                </div>
+            </div>
+            <div class="feature-item feature-yellow">今日所有商品10折起！</div>
+            <div class="feature-item feature-black">当前热门帖子：《BB的宣言》</div>
+        </div>  <!-- ← 这里要闭合 feature-grid -->
+    </div>  <!-- ← 这里要闭合 content-row -->
+
+
+    <!-- 迦勒底作战任务板块（可折叠） -->
+    <div class="mission-board">
+        <!-- 折叠按钮区域 - 始终可见 -->
+        <div class="mission-collapse-header" id="missionHeader">
+            <div class="mission-preview">
+                <div class="preview-left">
+                    <span class="mission-icon">⚔️</span>
+                    <div class="preview-info">
+                        <div class="preview-title">当前特异点</div>
+                        <div class="preview-name">？？？</div>
+                    </div>
+                </div>
+                <div class="preview-center">
+                    <div class="preview-progress">
+                        <span class="progress-text">任务进度</span>
+                        <div class="progress-bar-small">
+                            <div class="progress-fill-small" style="width: 0%;"></div>
+                        </div>
+                        <span class="progress-percent">0%</span>
+                    </div>
+                </div>
+                <div class="preview-right">
+                    <div class="preview-suitability">
+                        <span class="suitability-icon">⭐</span>
+                        <span class="suitability-text">从者适性：<strong>【？】属性</strong></span>
+                    </div>
+                    <div class="collapse-icon" id="collapseIcon">▼</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 详细内容 - 默认隐藏 -->
+        <div class="mission-detail" id="missionDetail">
+            <div class="mission-content">
+                <!-- 左侧：特异点信息 -->
+                <div class="mission-info">
+                    <div class="info-card">
+                        <div class="info-label">📌 当前特异点</div>
+                        <div class="info-value special-name">？？？</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-card half">
+                            <div class="info-label">📍 发生地点</div>
+                            <div class="info-value">迦勒底亚斯（当然是假的了）</div>
+                        </div>
+                        <div class="info-card half">
+                            <div class="info-label">⏰ 发生时间</div>
+                            <div class="info-value">？？？</div>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-card half">
+                            <div class="info-label">📅 任务持续时间</div>
+                            <div class="info-value">？？？</div>
+                        </div>
+                        <div class="info-card half">
+                            <div class="info-label">⚠️ 危险等级</div>
+                            <div class="info-value danger-level">EX </div>
+                        </div>
+                    </div>
+                    <div class="info-card full">
+                        <div class="info-label">📝 任务概要</div>
+                        <div class="info-value">可爱迷人的BB亲破解了困扰迦勒底已久的密码后，不小心出现了特异点</div>
+                    </div>
+                </div>
+                
+                <!-- 右侧：从者适性 -->
+                <div class="mission-suitability">
+                    <div class="suitability-title">⭐ 从者适性分析 ⭐</div>
+                    <div class="suitability-content">
+                        <div class="suitability-tag recommend">
+                            <span class="tag-icon">✅</span>
+                            <span class="tag-text">优先推荐</span>
+                            <span class="tag-desc">职介为他人格的从者</span>
+                        </div>
+                        <div class="suitability-list">
+                            <div class="servant-item">
+                                <div class="servant-icon">⚔️</div>
+                                <div class="servant-name">Meltryllis</div>
+                                <div class="servant-reason">叛逆、违背母亲意志的疯丫头</div>
+                            </div>
+                            <div class="servant-item">
+                                <div class="servant-icon">🦕</div>
+                                <div class="servant-name">Passionlip</div>
+                                <div class="servant-reason">一直顺从地服从母亲命令的乖宝宝♡</div>
+                            </div>
+                            <div class="servant-item">
+                                <div class="servant-icon">⚔️</div>
+                                <div class="servant-name">Kingprotea</div>
+                                <div class="servant-reason">拥有绝对体型的可怕力量型角色</div>
+                            </div>
+                            <div class="servant-item">
+                                <div class="servant-icon">🏹</div>
+                                <div class="servant-name">杀生院祈荒</div>
+                                <div class="servant-reason">可疑人物！请御主亲多加小心！！！</div>
+                            </div>
+                        </div>
+                        <div class="suitability-warning">
+                            <span class="warning-icon">⚠️</span>
+                            <span class="warning-text">注意：本次任务禁止编入【兽】属性从者，可能会引发不可预知的反应。</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 进度条 -->
+            <div class="mission-progress">
+                <div class="progress-label">任务完成度</div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 45%;"></div>
+                </div>
+                <div class="progress-stats">
+                    <span>已完成：0%</span>
+                    <span>剩余：100%</span>
+                    <span>预计剩余时间：7天</span>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    
+    <!-- Amazones 特别配送服务横框 -->
+    <!-- 红色大横框 -->
+    <div class="red-bar">
+        <div class="red-bar-text">🏪 Amazones 特别配送服务</div>
+    </div>
+
+    <!-- 👇 美食外卖选购区域 👇 -->
+    <div class="food-menu">
+        <div class="food-menu-title">🍱 今日推荐美食 🍜</div>
+        
+        <!-- 第一行：左边大图 + 右边两个小图 -->
+        <div class="food-row food-row-first">
+            <!-- 左边大图：特辣麻婆豆腐 -->
+            <div class="food-card food-card-large">
+                <img src="images/融化之心.png" alt="融化之心">
+                <div class="food-info">
+                    <div class="food-name">融化之心</div>
+                    <div class="food-price">500 QP <span class="food-origin-price">608 QP</span></div>
+                    <button class="order-btn">加入购物车</button>
+                </div>
+            </div>
+            
+            <!-- 右边两个小图 -->
+            <div class="food-small-group">
+                <div class="food-card food-card-small">
+                    <img src="images/樱的特制便当.png" alt="樱的特制便当">
+                    <div class="food-info">
+                        <div class="food-name">🌸 樱的特制便当</div>
+                        <div class="food-price">560 QP</div>
+                        <button class="order-btn">加入购物车</button>
+                    </div>
+                </div>
+                <div class="food-card food-card-small">
+                    <img src="images/手工图坦饭.png" alt="手工图坦饭">
+                    <div class="food-info">
+                        <div class="food-name">手工图坦饭</div>
+                        <div class="food-price">450 QP</div>
+                        <button class="order-btn">加入购物车</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 第二行：三个均匀排列的商品 -->
+        <div class="food-row food-row-second">
+            <div class="food-card food-card-medium">
+                <img src="images/排名第三的礼物.png" alt="排名第三的礼物">
+                <div class="food-info">
+                    <div class="food-name">排名第三的礼物</div>
+                    <div class="food-price">600 QP</div>
+                    <button class="order-btn">加入购物车</button>
+                </div>
+            </div>
+            <div class="food-card food-card-medium">
+                <img src="images/只不过是饭团.png" alt="只不过是饭团">
+                <div class="food-info">
+                    <div class="food-name">只不过是饭团</div>
+                    <div class="food-price">100 QP</div>
+                    <button class="order-btn">加入购物车</button>
+                </div>
+            </div>
+            <div class="food-card food-card-medium food-placeholder">
+                <div class="coming-soon">
+                    <span>📦</span>
+                    <p>更多商品<br>即将上架</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- 👇 日常用品购买区域 👇 -->
+    <div class="daily-goods">
+        <div class="daily-goods-title">🛒 日常用品商店 🛍️</div>
+        
+        <!-- 第一行：左边大图 -->
+        <div class="daily-row daily-row-first">
+            <!-- 左边大图：出发活动写真馆 -->
+            <div class="daily-card daily-card-large">
+                <img src="images/黄金☆名流之夜.png" alt="黄金☆名流之夜">
+                <div class="daily-info">
+                    <div class="daily-name">🎬 黄金☆名流之夜</div>
+                    <div class="daily-desc">珍藏版活动记录，限时发售</div>
+                    <div class="daily-price">5000 QP <span class="daily-origin-price">15000 QP</span></div>
+                    <button class="daily-order-btn">加入购物车</button>
+                </div>
+            </div>
+            
+            <!-- 右边三个小图（竖向排列） -->
+            <div class="daily-small-group">
+                <div class="daily-card daily-card-small">
+                    <img src="images/帅气的鲜红色（？）领带.png" alt="帅气的鲜红色（？）领带">
+                    <div class="daily-info">
+                        <div class="daily-name">帅气的鲜红色（？）领带</div>
+                        <div class="daily-price">999 QP</div>
+                        <button class="daily-order-btn">加入购物车</button>
+                    </div>
+                </div>
+                <div class="daily-card daily-card-small">
+                    <img src="images/附智能机变形功能的小为朝.png" alt="附智能机变形功能的小为朝">
+                    <div class="daily-info">
+                        <div class="daily-name">附智能机变形功能的小为朝</div>
+                        <div class="daily-price">2000 QP</div>
+                        <button class="daily-order-btn">加入购物车</button>
+                    </div>
+                </div>
+                <div class="daily-card daily-card-small">
+                    <img src="images/秘密秘藏秘宝相册.png" alt="秘密秘藏秘宝相册">
+                    <div class="daily-info">
+                        <div class="daily-name">秘密秘藏秘宝相册</div>
+                        <div class="daily-price">10000 QP</div>
+                        <button class="daily-order-btn">加入购物车</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 第二行：两个商品并排 -->
+        <div class="daily-row daily-row-second">
+            <div class="daily-card daily-card-medium">
+                <img src="images/返老还童的灵药.png" alt="返老还童的灵药">
+                <div class="daily-info">
+                    <div class="daily-name">⚗️ 返老还童的灵药</div>
+                    <div class="daily-price">12000 QP</div>
+                    <button class="daily-order-btn">加入购物车</button>
+                </div>
+            </div>
+            <div class="daily-card daily-card-medium">
+                <img src="images/夏日力量助威花.png" alt="夏日力量助威花">
+                <div class="daily-info">
+                    <div class="daily-name">夏日力量助威花</div>
+                    <div class="daily-price">500 QP</div>
+                    <button class="daily-order-btn">加入购物车</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 👇 娱乐商品（同人志/游戏）区域 👇 -->
+    <div class="entertainment-goods">
+        <div class="entertainment-title">🎮 娱乐商品·同人志专区 🎴</div>
+        
+        <!-- 第一行：左边大图 -->
+        <div class="entertainment-row entertainment-row-first">
+            <div class="entertainment-card entertainment-card-large">
+                <img src="images/克罗斯碧奇的魔法姬与怪物.png" alt="克罗斯碧奇的魔法姬与怪物">
+                <div class="entertainment-info">
+                    <div class="entertainment-name">🎮 克罗斯碧奇的魔法姬与怪物</div>
+                    <div class="entertainment-type">【游戏软件】</div>
+                    <div class="entertainment-desc">被诅咒的怪物与魔法姬相遇的故事</div>
+                    <div class="entertainment-price">2500 QP <span class="entertainment-origin-price">3168 QP</span></div>
+                    <button class="entertainment-order-btn">加入购物车</button>
+                </div>
+            </div>
+            
+            <div class="entertainment-small-group">
+                <div class="entertainment-card entertainment-card-small">
+                    <img src="images/咱们的圆桌.png" alt="咱们的圆桌">
+                    <div class="entertainment-info">
+                        <div class="entertainment-name">咱们的圆桌</div>
+                        <div class="entertainment-type">【同人志】</div>
+                        <div class="entertainment-price">600 QP</div>
+                        <button class="entertainment-order-btn">加入购物车</button>
+                    </div>
+                </div>
+                <div class="entertainment-card entertainment-card-small">
+                    <img src="images/『昏暗林中的温柔之雨』.png" alt="『昏暗林中的温柔之雨』">
+                    <div class="entertainment-info">
+                        <div class="entertainment-name">『昏暗林中的温柔之雨』</div>
+                        <div class="entertainment-type">【童话】</div>
+                        <div class="entertainment-price">1200 QP</div>
+                        <button class="entertainment-order-btn">加入购物车</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 第二行：两个商品并排 -->
+        <div class="entertainment-row entertainment-row-second">
+            <div class="entertainment-card entertainment-card-medium">
+                <img src="images/反派大小姐想将坏女人彻底打废！.png" alt="反派大小姐想将坏女人彻底打废！">
+                <div class="entertainment-info">
+                    <div class="entertainment-name">反派大小姐想将坏女人彻底打废！</div>
+                    <div class="entertainment-type">【轻小说】</div>
+                    <div class="entertainment-desc">反派大小姐的拔旗之旅</div>
+                    <div class="entertainment-price">800 QP</div>
+                    <button class="entertainment-order-btn">加入购物车</button>
+                </div>
+            </div>
+            <div class="entertainment-card entertainment-card-medium">
+                <img src="images/咖喱×米饭.png" alt="咖喱×米饭">
+                <div class="entertainment-info">
+                    <div class="entertainment-name">咖喱×米饭</div>
+                    <div class="entertainment-type">【同人志】</div>
+                    <div class="entertainment-desc">两位战士命运般的相遇</div>
+                    <div class="entertainment-price">750 QP</div>
+                    <button class="entertainment-order-btn">加入购物车</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- 👇 在这里添加帖子板块 👇 -->
+    <div class="posts-section">
+        <div class="posts-title">📝 迦勒底热门帖子 📝</div>
+        <div class="posts-list" id="postsList"></div>
+        <div id="postModal" class="post-modal">
+            <div class="post-modal-content">
+                <div class="post-modal-header">
+                    <h3 id="modalTitle"></h3>
+                    <span class="post-modal-close" onclick="closePostModal()">&times;</span>
+                </div>
+                <div class="post-modal-body" id="modalContent"></div>
+                <!-- 评论区域 -->
+                <div class="post-comments-section" id="postCommentsSection">
+                    <div class="comments-title">💬 评论区</div>
+                    <div class="comments-list" id="commentsList"></div>
+                    <div class="comment-input-area">
+                        <textarea id="commentText" placeholder="写下你的评论..." rows="3"></textarea>
+                        <button class="submit-comment-btn" onclick="submitComment()">发表评论</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ========== 登录弹窗 ========== -->
+    <div id="loginModal" class="auth-modal">
+        <div class="auth-modal-content">
+            <div class="auth-modal-header">
+                <h3>🔐 登录BB频道</h3>
+                <span class="auth-close" onclick="closeLoginModal()">&times;</span>
+            </div>
+            <div class="auth-modal-body">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" onclick="switchAuthTab('login')">登录</button>
+                    <button class="auth-tab" onclick="switchAuthTab('register')">注册</button>
+                </div>
+                
+                <!-- 登录表单 -->
+                <div id="loginForm" class="auth-form">
+                    <div class="input-group">
+                        <label>📝 用户名</label>
+                        <input type="text" id="loginUsername" placeholder="请输入用户名">
+                    </div>
+                    <div class="input-group">
+                        <label>🔒 密码</label>
+                        <input type="password" id="loginPassword" placeholder="请输入密码">
+                    </div>
+                    <button class="auth-btn" onclick="doLogin()">登 录</button>
+                    <p id="loginMsg" class="auth-msg"></p>
+                </div>
+                
+                <!-- 注册表单 -->
+                <div id="registerForm" class="auth-form" style="display: none;">
+                    <div class="input-group">
+                        <label>👤 用户名</label>
+                        <input type="text" id="regName" placeholder="请输入用户名">
+                    </div>
+                    <div class="input-group">
+                        <label>🏷️ 身份</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="role" value="从者" checked> ⚔️ 从者
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="role" value="职员"> 🏢 职员
+                            </label>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>🔒 密码</label>
+                        <input type="password" id="regPassword" placeholder="请输入密码">
+                    </div>
+                    <div class="input-group">
+                        <label>✓ 确认密码</label>
+                        <input type="password" id="regConfirmPassword" placeholder="请再次输入密码">
+                    </div>
+                    <button class="auth-btn" onclick="doRegister()">注 册</button>
+                    <p id="registerMsg" class="auth-msg"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+</div>
+
+        <!-- ========== 页脚 ========== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="images/BB_标志1.png" alt="BB" class="footer-logo-img">
+                    <span class="footer-site-name">BB Channel</span>
+                </div>
+                <p class="footer-desc">BB官方频道，为您提供最新的迦勒底资讯、从者情报和活动信息。</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link">📘</a>
+                    <a href="#" class="social-link">🐦</a>
+                    <a href="#" class="social-link">📺</a>
+                    <a href="#" class="social-link">🎵</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">从者图鉴</a></li>
+                    <li><a href="#">活动资讯</a></li>
+                    <li><a href="#">攻略专区</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>关于我们</h4>
+                <ul>
+                    <li><a href="#">关于迦勒底</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">加入我们</a></li>
+                    <li><a href="#">友情链接</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>联系方式</h4>
+                <ul class="contact-info">
+                    <li>📧 BB@fgo.com</li>
+                    <li>📞 400-123-7777</li>
+                    <li>🏢 深海电脑乐土 SE.RA.PH</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 BB Channel. All Rights Reserved. BB频道 版权所有</p>
+            <p>ICP备 12345678号 | 公安机关备案号 12345678901234</p>
+        </div>
+    </footer>
+
+        <!-- ========== 购物车浮标 ========== -->
+    <div class="cart-float" id="cartFloat" onclick="toggleCartSidebar()">
+        <div class="cart-icon">
+            🛒
+        </div>
+        <span class="cart-badge" id="cartBadge">0</span>
+    </div>
+
+    <!-- ========== 购物车侧边栏 ========== -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-sidebar-header">
+            <h3>🛒 购物车</h3>
+            <button class="cart-close" onclick="toggleCartSidebar()">&times;</button>
+        </div>
+        <div class="cart-sidebar-body" id="cartItemsList">
+            <div class="cart-empty">
+                🛍️ 购物车还是空的<br>
+                快去添加一些商品吧！
+            </div>
+        </div>
+        <div class="cart-sidebar-footer" id="cartFooter" style="display: none;">
+            <div class="cart-total">
+                <span>总计：</span>
+                <span class="cart-total-price" id="cartTotalPrice">￥0</span>
+            </div>
+            <button class="cart-checkout" onclick="checkout()">去结算</button>
+            <button class="cart-clear" onclick="clearCart()">清空购物车</button>
+        </div>
+    </div>
+
+    <!-- 遮罩层 -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCartSidebar()"></div>
+
+    <script>
+        // 滚动报幕脚本
+        const tickerContent = document.getElementById('tickerContent');
+        const tickerContainer = document.querySelector('.ticker-container');
+        
+        let speed = 1.5;
+        let currentPosition = 0;
+        let animationId = null;
+        let isScrolling = true;
+        
+        let contentWidth = tickerContent.scrollWidth;
+        let containerWidth = tickerContainer.clientWidth;
+        
+        currentPosition = containerWidth;
+        tickerContent.style.transform = `translateX(${currentPosition}px)`;
+        
+        function scrollNews() {
+            if (!isScrolling) return;
+            currentPosition -= speed;
+            if (currentPosition <= -contentWidth) {
+                currentPosition = containerWidth;
+            }
+            tickerContent.style.transform = `translateX(${currentPosition}px)`;
+            animationId = requestAnimationFrame(scrollNews);
+        }
+        
+        window.addEventListener('resize', function() {
+            contentWidth = tickerContent.scrollWidth;
+            containerWidth = tickerContainer.clientWidth;
+            if (currentPosition <= -contentWidth) {
+                currentPosition = containerWidth;
+                tickerContent.style.transform = `translateX(${currentPosition}px)`;
+            }
+        });
+        
+        tickerContainer.addEventListener('mouseenter', function() {
+            isScrolling = false;
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+                animationId = null;
+            }
+        });
+        
+        tickerContainer.addEventListener('mouseleave', function() {
+            if (!isScrolling) {
+                isScrolling = true;
+                animationId = requestAnimationFrame(scrollNews);
+            }
+        });
+        
+        animationId = requestAnimationFrame(scrollNews);
+        
+        // 轮播图脚本
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const wrapper = document.getElementById('carouselWrapper');
+        const totalSlides = slides.length;
+        
+        // 添加循环克隆（可选，实现无缝轮播）
+        if (totalSlides > 1) {
+            // 克隆第一张和最后一张实现无缝循环
+            const firstClone = slides[0].cloneNode(true);
+            const lastClone = slides[totalSlides - 1].cloneNode(true);
+            wrapper.appendChild(firstClone);
+            wrapper.insertBefore(lastClone, slides[0]);
+            
+            // 重新获取slides
+            const newSlides = document.querySelectorAll('.carousel-slide');
+            const newTotalSlides = newSlides.length;
+            
+            // 设置初始位置到真正的第一张
+            wrapper.style.transform = `translateX(-100%)`;
+            currentSlide = 1;
+            
+            function nextSlide() {
+                currentSlide++;
+                wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+                wrapper.style.transition = 'transform 0.5s ease-in-out';
+                
+                // 到达克隆的末尾时，瞬间跳回
+                if (currentSlide === newTotalSlides - 1) {
+                    setTimeout(() => {
+                        wrapper.style.transition = 'none';
+                        currentSlide = 1;
+                        wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+                        setTimeout(() => {
+                            wrapper.style.transition = 'transform 0.5s ease-in-out';
+                        }, 50);
+                    }, 500);
+                }
+                
+                // 到达开头的克隆时，瞬间跳回
+                if (currentSlide === 0) {
+                    setTimeout(() => {
+                        wrapper.style.transition = 'none';
+                        currentSlide = newTotalSlides - 2;
+                        wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+                        setTimeout(() => {
+                            wrapper.style.transition = 'transform 0.5s ease-in-out';
+                        }, 50);
+                    }, 500);
+                }
+            }
+            
+            setInterval(nextSlide, 3000);
+        } else {
+            // 只有一张图片时，不轮播
+            setInterval(nextSlide, 3000);
+        }
+
+            // ========== 帖子板块数据 ==========
+    // 帖子数据数组
+    const postsData = [
+        {
+            id: 1,
+            title: "【首帖】BB的宣言",
+            summary: "BB的宣言",
+            content: "迦勒底的大家现在是不是感觉莫名其妙、甚至恐慌以及害怕呢？BB亲对于这样的事真是深感抱歉。不过，这是对你们有这种情绪而感到可悲的抱歉噢。想回到原来的网站？我账号上的QP怎么不见了？网页为什么时不时弹出虚假新闻？这些，BB亲都不会为你们解决的！虽然我能做到，但是不想去做呢~！大家就这样痛苦地抗议到人理毁灭吧♡\n PS：\n\n沉浸在BB亲的超高规格的频道中吧",
+            author: "BB",
+            date: "2024-05-20",
+            likes: 6666,
+            comments: 150,
+            commentsList: [
+                { id: 1, author: "✨前辈白", content: "稍微有点过火了呢，BB，我觉得这样不太好", likes: 256, date: "2024-05-20", avatar: "👤" },
+                { id: 2, author: "⚔️达芬奇亲", content: "等着我从你手上夺回权限吧！", likes: 128, date: "2024-05-20", avatar: "🐉" },
+                { id: 3, author: "🌸骑骑布", content: "在这网站上能买到原本没有的东西，虽然从这点来说我觉得挺好的啦...", likes: 89, date: "2024-05-21", avatar: "🛡️" },
+                { id: 4, author: "🌟胡子骑士", content: "芜噢噢噢噢噢——这口气完全是小恶魔系啊！我好喜欢", likes: 45, date: "2024-05-21", avatar: "👨‍⚕️" }
+            ]
+        },
+        {
+            id: 2,
+            title: "【攻略分享】如何快速刷满羁绊值？我的心得（无良心版本）",
+            summary: "从零开始，两周羁绊10达成！",
+            content: "大家好，我是迦勒底的老御主了。今天分享下我的刷羁绊经验：\n\n1. 优先选择「月光采集场」的日常本\n2. 带上增加羁绊的礼装「午餐时光」\n3. 带上宝石翁的阿拉什\n4. 借助好友的超级强力的希耶尔\n\n目前我已经刷满了3个从者的羁绊11了，欢迎大家交流心得！不过，这方法挺消耗阿拉什的，阿拉什羁绊满之后可以换陈宫",
+            author: "攻略达人·混沌",
+            date: "2024-05-18",
+            likes: 342,
+            comments: 56,
+            commentsList: [
+                { id: 1, author: "✨一星弓兵阿", content: "虽然我很开心能帮到御主，但是...偶尔也好，我也想耍帅地说下胜利台词啊", likes: 256, date: "2024-05-20", avatar: "👤" },
+                { id: 2, author: "⚔️陈公台", content: "准备好炮弹，我随时都能应命。", likes: 128, date: "2024-05-20", avatar: "🐉" },
+                { id: 3, author: "🌸某征服王之臣", content: "我最近挺忙的，啊，就是要指导下学生们，就不用叫我了", likes: 89, date: "2024-05-21", avatar: "🛡️" }
+            ]
+
+        },
+        {
+            id: 3,
+            title: "【美食制作分享】Emiya小课堂",
+            summary: "深入分析烹饪料理，针对零基础的新人的详细教学",
+            content: "炎炎夏日，今天我来给大家说明一份夏日美食，凉面如何制作：\n\n•首先准备主料：日本素面：1-2 束，\n面汁（Tsuyu）：市售鲣鱼酱油，按比例加冰水稀释\n以及配料（可自选）：小葱碎、姜蓉、白芝麻、海苔丝\n制作步骤：1.煮面：锅中水烧开，下入素面，保持大火沸腾煮 1.5 至 2 分钟。\n2.冰镇：捞出面条，立刻用冷水反复冲洗掉表面淀粉，最后浸入冰水中彻底冷却，沥干水分。\n3.组装：面条盛盘（可加冰块保鲜）；另用小碗盛装稀释好的冰镇面汁，撒入小葱、姜蓉和芝麻。\n你还想知道什么菜的制作方法呢？请留言告诉我！",
+            author: "Emiya",
+            date: "2024-05-15",
+            likes: 278,
+            comments: 42,
+                commentsList: [
+                { id: 1, author: "✨提亚妈妈", content: "感谢传授！孩子们吃的很开心", likes: 256, date: "2024-05-20", avatar: "👤" },
+                { id: 2, author: "⚔️蓝色枪兵", content: "难怪你被人叫做卫宫妈妈啦~", likes: 128, date: "2024-05-20", avatar: "🐉" },
+                { id: 3, author: "🌸金色女神", content: "虽然是些低档次的玩意儿，但意外地合本女神我的胃口呢", likes: 89, date: "2024-05-21", avatar: "🛡️" },
+            ]
+        },
+        {
+            id: 4,
+            title: "【服装企划】想看到我推们闪闪发光的样子——！",
+            summary: "服装模特的企划",
+            content: "寻求：有兴趣成为模特的可人儿十名或以上，年龄不限，性别不限，种族不限！\nps:无薪酬，有本人亲手制作的衣服为报酬，相关的服装秀将于一个月后于迦勒底举行",
+            author: "灵衣制作坊·克莱克莱",
+            date: "2024-05-12",
+            likes: 521,
+            comments: 89,
+            commentsList: [
+                { id: 1, author: "爱吃团子", content: "克莱恩小姐真是努力...这就是推的力量？小艾不明白", likes: 256, date: "2024-05-20", avatar: "👤" },
+                { id: 2, author: "吸血公", content: "上次的合作让吾认识到，克莱你虽然有点不正常，但制作服装的能力是绝对一流的", likes: 128, date: "2024-05-20", avatar: "🐉" },
+                { id: 3, author: "宅姬", content: "好衣服+美人，感觉不是我这边能触及的东西呢", likes: 89, date: "2024-05-21", avatar: "🛡️" }
+            ]
+        },
+        {
+            id: 5,
+            title: "【求助】好多魔神柱涌现，打不过来了！（泪",
+            summary: "打完一个柱子又会生成一个",
+            content: "感觉打到魔力要枯竭了，为了人理和迦勒底的大家，我会坚持下去。但是，感觉要撑不住了。",
+            author: "萌新御主·藤丸",
+            date: "2024-05-10",
+            likes: 89,
+            comments: 67,
+            commentsList: [
+                { id: 1, author: "未知信号", content: "再坚持一下，剩下的就交给我吧", likes: 999, date: "2024-05-20", avatar: "👤" },
+                { id: 2, author: "代行者希耶尔", content: "发个坐标来，我来助你", likes: 128, date: "2024-05-20", avatar: "🐉" },
+                { id: 3, author: "御主.混沌", content: "噢噢噢噢是柱子是柱子是柱子是柱子!!!!", likes: 89, date: "2024-05-21", avatar: "🛡️" },
+                { id: 4, author: "白色圣女", content: "Master，请等一下，我们立刻赶到", likes: 45, date: "2024-05-21", avatar: "👨‍⚕️" }
+            ]
+        },
+        {
+            id: 6,
+            title: "【活动预告】夏日泳装活动即将开启！",
+            summary: "官方消息：新的泳装从者即将登场",
+            content: "据迦勒底官方消息，今年的夏日泳装活动将于下周五开启！\n\n🌟 预计新从者：\n- ★5 泳装阿尔托莉雅\n- ★4 泳装玛修\n- ★4 泳装尼禄\n\n🎁 登录奖励：\n活动期间每日登录送圣晶石×3\n\n准备好你们的圣晶石了吗？",
+            author: "迦勒底情报局",
+            date: "2024-05-08",
+            likes: 634,
+            comments: 128,
+            commentsList: [
+                { id: 1, author: "胡子骑士", content: "这都是多久的老新闻了", likes: 150, date: "2024-05-20", avatar: "👤" },
+                { id: 2, author: "Light", content: "让人想起第一次泳装活动的时候呢", likes: 125, date: "2024-05-20", avatar: "🐉" },
+            ]
+        }
+    ];
+
+        // 存储评论点赞的key
+    const COMMENT_LIKES_KEY = 'chaldea_comment_likes';
+
+    // 生成帖子列表HTML
+    function renderPostsList() {
+        const postsList = document.getElementById('postsList');
+        if (!postsList) return;
+        
+        let html = '';
+        postsData.forEach(post => {
+            html += `
+                <div class="post-card" data-id="${post.id}">
+                    <div class="post-card-header">
+                        <h3 class="post-title">${post.title}</h3>
+                        <span class="post-likes">❤️ ${post.likes}</span>
+                    </div>
+                    <div class="post-summary">${post.summary}</div>
+                    <div class="post-meta">
+                        <span>✍️ ${post.author}</span>
+                        <span>📅 ${post.date}</span>
+                        <span>💬 ${post.comments} 条评论</span>
+                    </div>
+                    <button class="view-post-btn" onclick="viewPost(${post.id})">📖 阅读全文</button>
+                </div>
+            `;
+        });
+        postsList.innerHTML = html;
+    }
+
+    // 查看帖子内容
+    function viewPost(postId) {
+        const post = postsData.find(p => p.id === postId);
+        if (!post) return;
+        
+        // 设置弹窗内容
+        document.getElementById('modalTitle').innerHTML = post.title;
+        
+        // 格式化内容（保留换行）
+        const contentHtml = `
+            <div class="post-detail-meta">
+                <span>✍️ 作者：${post.author}</span>
+                <span>📅 发布时间：${post.date}</span>
+                <span>❤️ 点赞：${post.likes}</span>
+                <span>💬 评论：${post.commentsList ? post.commentsList.length : 0} 条评论</span>
+            </div>
+            <div class="post-detail-content">
+                ${post.content.replace(/\n/g, '<br>')}
+            </div>
+            <div class="post-detail-footer">
+                <button class="like-btn" onclick="likePost(${post.id})">👍 点赞</button>
+            </div>
+        `;
+        
+        document.getElementById('modalContent').innerHTML = contentHtml;
+        
+        // 显示评论区域
+        renderComments(postId);
+        
+        // 保存当前帖子ID，用于发表评论
+        window.currentPostId = postId;
+        
+        // 显示弹窗
+        document.getElementById('postModal').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+    
+    // 渲染评论列表
+    function renderComments(postId) {
+        const post = postsData.find(p => p.id === postId);
+        const commentsListDiv = document.getElementById('commentsList');
+        
+        // 如果评论区元素不存在，就不执行
+        if (!commentsListDiv) return;
+        
+        if (!post || !post.commentsList || post.commentsList.length === 0) {
+            commentsListDiv.innerHTML = '<div class="no-comments">还没有评论，快来抢沙发吧~</div>';
+            return;
+        }
+        
+        // 获取评论点赞状态
+        const likedComments = JSON.parse(localStorage.getItem(COMMENT_LIKES_KEY) || '{}');
+        
+        let html = '';
+        post.commentsList.forEach(comment => {
+            const isLiked = likedComments[`${postId}_${comment.id}`] || false;
+            html += `
+                <div class="comment-item" data-comment-id="${comment.id}">
+                    <div class="comment-avatar">${comment.avatar || '👤'}</div>
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <span class="comment-author">${comment.author}</span>
+                            <span class="comment-date">${comment.date}</span>
+                        </div>
+                        <div class="comment-text">${comment.content}</div>
+                        <div class="comment-footer">
+                            <button class="comment-like-btn ${isLiked ? 'liked' : ''}" onclick="likeComment(${postId}, ${comment.id})">
+                                👍 ${comment.likes || 0}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+        
+        commentsListDiv.innerHTML = html;
+    }
+
+        // 关闭帖子详情弹窗
+    function closePostModal() {
+        const modal = document.getElementById('postModal');
+        if (modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    }
+
+    // 点赞帖子
+    function likePost(postId) {
+        const post = postsData.find(p => p.id === postId);
+        if (post) {
+            post.likes++;
+            // 刷新帖子列表
+            renderPostsList();
+            // 如果弹窗是打开的，刷新弹窗内容
+            const modal = document.getElementById('postModal');
+            if (modal && modal.style.display === 'block') {
+                // 重新渲染当前帖子内容
+                const currentPostId = window.currentPostId;
+                if (currentPostId === postId) {
+                    viewPost(postId);
+                }
+            }
+            showToast('点赞成功！');
+        }
+    }
+
+    // 统一处理所有弹窗的点击外部关闭
+    window.addEventListener('click', function(event) {
+        const postModal = document.getElementById('postModal');
+        if (event.target === postModal) {
+            closePostModal();
+        }
+        const loginModal = document.getElementById('loginModal');
+        if (event.target === loginModal) {
+            closeLoginModal();
+        }
+    });
+    
+    // 点赞评论
+    function likeComment(postId, commentId) {
+        const post = postsData.find(p => p.id === postId);
+        const comment = post.commentsList.find(c => c.id === commentId);
+        
+        if (comment) {
+            const likedComments = JSON.parse(localStorage.getItem(COMMENT_LIKES_KEY) || '{}');
+            const key = `${postId}_${commentId}`;
+            
+            if (likedComments[key]) {
+                // 取消点赞
+                likedComments[key] = false;
+                comment.likes = (comment.likes || 0) - 1;
+            } else {
+                // 点赞
+                likedComments[key] = true;
+                comment.likes = (comment.likes || 0) + 1;
+            }
+            
+            localStorage.setItem(COMMENT_LIKES_KEY, JSON.stringify(likedComments));
+            renderComments(postId);
+        }
+    }
+    
+    // 发表评论
+    function submitComment() {
+        const commentText = document.getElementById('commentText').value.trim();
+        if (!commentText) {
+            showToast('请输入评论内容');
+            return;
+        }
+        
+        const currentUser = getCurrentUser();
+        if (!currentUser) {
+            showToast('请先登录后再发表评论');
+            closePostModal();
+            openLoginModal();
+            return;
+        }
+        
+        const postId = window.currentPostId;
+        const post = postsData.find(p => p.id === postId);
+        
+        if (post) {
+            // 获取用户角色对应的头像
+            let avatar = '👤';
+            let displayName = currentUser.username;
+            if (currentUser.role === '从者') {
+                avatar = '⚔️';
+                displayName = currentUser.username + ' (从者)';
+            } else if (currentUser.role === '御主') {
+                avatar = '👑';
+                displayName = currentUser.username + ' (御主)';
+            } else if (currentUser.role === '职员') {
+                avatar = '🏢';
+                displayName = currentUser.username + ' (职员)';
+            }
+            
+            // 添加新评论
+            const newComment = {
+                id: Date.now(),
+                author: displayName,
+                content: commentText,
+                likes: 0,
+                date: new Date().toISOString().slice(0, 10),
+                avatar: avatar
+            };
+            
+            if (!post.commentsList) {
+                post.commentsList = [];
+            }
+            post.commentsList.push(newComment);
+            
+            // 清空输入框
+            document.getElementById('commentText').value = '';
+            
+            // 重新渲染评论
+            renderComments(postId);
+            showToast('评论发表成功！');
+        }
+    }
+
+    // 初始化帖子板块
+    renderPostsList();
+
+        // ========== 作战任务板块折叠功能 ==========
+    const missionHeader = document.getElementById('missionHeader');
+    const missionDetail = document.getElementById('missionDetail');
+    const collapseIcon = document.getElementById('collapseIcon');
+    
+    let isExpanded = false;
+    
+    function toggleMission() {
+        if (isExpanded) {
+            // 收起
+            missionDetail.style.maxHeight = '0';
+            missionDetail.style.opacity = '0';
+            missionDetail.style.marginTop = '0';
+            missionDetail.style.paddingTop = '0';
+            setTimeout(() => {
+                missionDetail.style.display = 'none';
+            }, 300);
+            collapseIcon.style.transform = 'rotate(0deg)';
+            isExpanded = false;
+        } else {
+            // 展开
+            missionDetail.style.display = 'block';
+            setTimeout(() => {
+                missionDetail.style.maxHeight = missionDetail.scrollHeight + 'px';
+                missionDetail.style.opacity = '1';
+                missionDetail.style.marginTop = '20px';
+            }, 10);
+            collapseIcon.style.transform = 'rotate(180deg)';
+            isExpanded = true;
+        }
+    }
+    
+    missionHeader.addEventListener('click', toggleMission);
+
+        // ========== 登录/注册功能 ==========
+    
+    // 用户数据存储key
+    const USERS_KEY = 'chaldea_users';
+    const CURRENT_USER_KEY = 'chaldea_current_user';
+    
+    // 初始化用户数据（如果没有则创建默认）
+    function initUsers() {
+        if (!localStorage.getItem(USERS_KEY)) {
+            const defaultUsers = [
+                { username: '藤丸立香', password: '123456', role: '御主', qp: 10000 },
+                { username: '阿拉什', password: '123456', role: '从者', qp: 50000 },
+                { username: '达芬奇', password: '123456', role: '从者', qp: 100000000 },
+                { username: '玛修', password: '123456', role: '从者', qp: 80000 }
+            ];
+            localStorage.setItem(USERS_KEY, JSON.stringify(defaultUsers));
+        }
+    }
+    
+    // 获取所有用户
+    function getUsers() {
+        return JSON.parse(localStorage.getItem(USERS_KEY) || '[]');
+    }
+    
+    // 保存用户
+    function saveUsers(users) {
+        localStorage.setItem(USERS_KEY, JSON.stringify(users));
+    }
+    
+    // 获取当前登录用户
+    function getCurrentUser() {
+        const userStr = localStorage.getItem(CURRENT_USER_KEY);
+        return userStr ? JSON.parse(userStr) : null;
+    }
+    
+    // 保存当前登录用户
+    function setCurrentUser(user) {
+        localStorage.setItem(CURRENT_USER_KEY, JSON.stringify(user));
+    }
+    
+    // 清除登录状态
+    function clearCurrentUser() {
+        localStorage.removeItem(CURRENT_USER_KEY);
+    }
+    
+    // 切换登录/注册标签
+    function switchAuthTab(tab) {
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+        const tabs = document.querySelectorAll('.auth-tab');
+        
+        if (tab === 'login') {
+            loginForm.style.display = 'block';
+            registerForm.style.display = 'none';
+            tabs[0].classList.add('active');
+            tabs[1].classList.remove('active');
+        } else {
+            loginForm.style.display = 'none';
+            registerForm.style.display = 'block';
+            tabs[0].classList.remove('active');
+            tabs[1].classList.add('active');
+        }
+        
+        // 清空提示信息
+        document.getElementById('loginMsg').innerText = '';
+        document.getElementById('registerMsg').innerText = '';
+    }
+    
+    // 打开登录弹窗
+    function openLoginModal() {
+        document.getElementById('loginModal').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        // 重置表单
+        switchAuthTab('login');
+        document.getElementById('loginUsername').value = '';
+        document.getElementById('loginPassword').value = '';
+        document.getElementById('regName').value = '';
+        document.getElementById('regPassword').value = '';
+        document.getElementById('regConfirmPassword').value = '';
+        document.getElementById('loginMsg').innerText = '';
+        document.getElementById('registerMsg').innerText = '';
+    }
+    
+    // 关闭登录弹窗
+    function closeLoginModal() {
+        document.getElementById('loginModal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+    
+        // 登录功能
+    function doLogin() {
+        const username = document.getElementById('loginUsername').value.trim();
+        const password = document.getElementById('loginPassword').value;
+        const msgEl = document.getElementById('loginMsg');
+        
+        if (!username || !password) {
+            msgEl.innerText = '请输入用户名和密码';
+            return;
+        }
+        
+        const users = getUsers();
+        const user = users.find(u => u.username === username && u.password === password);
+        
+        if (user) {
+            // 修改这里：保存完整的用户信息，包括qp
+            setCurrentUser({ 
+                username: user.username, 
+                role: user.role, 
+                qp: user.qp || 0 
+            });
+            msgEl.innerText = '';
+            closeLoginModal();
+            // 修改这里：传递 qp 参数
+            updateNavAfterLogin(user.username, user.role, user.qp || 0);
+            showToast('登录成功！欢迎 ' + username + (user.role ? ' (' + user.role + ')' : ''));
+
+        } else {
+            msgEl.innerText = '用户名或密码错误';
+        }
+    }
+    
+    // 注册功能
+    function doRegister() {
+        const username = document.getElementById('regName').value.trim();
+        const role = document.querySelector('input[name="role"]:checked').value;
+        const password = document.getElementById('regPassword').value;
+        const confirmPassword = document.getElementById('regConfirmPassword').value;
+        const msgEl = document.getElementById('registerMsg');
+        
+        if (!username) {
+            msgEl.innerText = '请输入用户名';
+            return;
+        }
+        
+        if (username.length < 2) {
+            msgEl.innerText = '用户名至少2个字符';
+            return;
+        }
+        
+        if (!password) {
+            msgEl.innerText = '请输入密码';
+            return;
+        }
+        
+        if (password.length < 4) {
+            msgEl.innerText = '密码至少4个字符';
+            return;
+        }
+        
+        if (password !== confirmPassword) {
+            msgEl.innerText = '两次输入的密码不一致';
+            return;
+        }
+        
+        const users = getUsers();
+        if (users.find(u => u.username === username)) {
+            msgEl.innerText = '用户名已存在，请选择其他用户名';
+            return;
+        }
+        
+        // 添加新用户
+        users.push({ username, password, role });
+        saveUsers(users);
+        
+        msgEl.innerText = '';
+        showToast('注册成功！请登录');
+        
+        // 切换到登录表单
+        switchAuthTab('login');
+        document.getElementById('loginUsername').value = username;
+        document.getElementById('loginPassword').value = '';
+    }
+
+        // 格式化QP显示（千分位）
+    function formatQP(qp) {
+        if (qp >= 100000000) {
+            return (qp / 100000000).toFixed(1) + '亿';
+        } else if (qp >= 10000) {
+            return (qp / 10000).toFixed(0) + '万';
+        }
+        return qp.toLocaleString();
+    }
+
+    // 更新导航栏（登录后）
+    function updateNavAfterLogin(username, role, qp) {
+        const navRight = document.querySelector('.nav-right');
+        let roleDisplay = '';
+        if (role === '从者') {
+            roleDisplay = '⚔️ 从者';
+        } else if (role === '职员') {
+            roleDisplay = '🏢 职员';
+        } else if (role === '御主') {
+            roleDisplay = '👑 御主';
+        }
+        
+        // 直接使用传入的 qp 参数
+        const qpValue = qp || 0;
+        
+        navRight.innerHTML = `
+            <div class="user-info">
+                <div class="user-main">
+                    <span class="user-name">👤 ${username}</span>
+                    ${roleDisplay ? `<span class="user-role-badge">${roleDisplay}</span>` : ''}
+                </div>
+                <div class="user-qp">
+                    <span class="qp-icon">💰</span>
+                    <span class="qp-value">${formatQP(qpValue)} QP</span>
+                </div>
+                <a href="javascript:void(0)" class="logout-link" onclick="logout()">退出</a>
+            </div>
+        `;
+    }
+    
+    // 退出登录
+    function logout() {
+        clearCurrentUser();
+        // 恢复导航栏
+        const navRight = document.querySelector('.nav-right');
+        navRight.innerHTML = `
+            <a href="javascript:void(0)" class="nav-link" onclick="openLoginModal()">登录</a>
+            <a href="javascript:void(0)" class="nav-link" onclick="openLoginModal()">注册</a>
+        `;
+        showToast('已退出登录');
+    }
+    
+    // 简单提示功能
+    function showToast(message) {
+        // 创建临时提示
+        const toast = document.createElement('div');
+        toast.textContent = message;
+        toast.style.cssText = `
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 14px;
+            z-index: 3000;
+            font-family: 'Inter', sans-serif;
+            animation: fadeInOut 2.5s ease;
+        `;
+        document.body.appendChild(toast);
+        
+        setTimeout(() => {
+            toast.remove();
+        }, 2500);
+    }
+    
+    // 添加淡入淡出动画
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translateX(-50%) translateY(20px); }
+            15% { opacity: 1; transform: translateX(-50%) translateY(0); }
+            85% { opacity: 1; transform: translateX(-50%) translateY(0); }
+            100% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+        }
+    `;
+    document.head.appendChild(style);
+    
+    // 检查登录状态并更新导航栏
+    function checkLoginStatus() {
+        const currentUser = getCurrentUser();
+        if (currentUser && currentUser.username) {
+            // 从存储的用户数据中获取完整的 qp 值
+            const users = getUsers();
+            const fullUser = users.find(u => u.username === currentUser.username);
+            const qpValue = (fullUser && fullUser.qp) ? fullUser.qp : (currentUser.qp || 0);
+            updateNavAfterLogin(currentUser.username, currentUser.role, qpValue);
+        }
+    }
+    // 点击弹窗外部关闭
+    window.onclick = function(event) {
+        const modal = document.getElementById('loginModal');
+        if (event.target === modal) {
+            closeLoginModal();
+        }
+    }
+    
+    // 修改原有导航栏的登录注册按钮（需要等DOM加载完成后）
+    document.addEventListener('DOMContentLoaded', function() {
+        initUsers();
+        checkLoginStatus();
+        
+        // 重新绑定登录注册按钮（因为可能被覆盖）
+        const navRight = document.querySelector('.nav-right');
+        if (navRight && !getCurrentUser()) {
+            navRight.innerHTML = `
+                <a href="javascript:void(0)" class="nav-link" onclick="openLoginModal()">登录</a>
+                <a href="javascript:void(0)" class="nav-link" onclick="openLoginModal()">注册</a>
+            `;
+        }
+    });
+
+        // ========== 购物车功能 ==========
+    
+    // 购物车数据存储key
+    const CART_KEY = 'chaldea_cart';
+    
+    // 商品价格映射（QP）
+    const productPrices = {
+        // 美食区
+        '融化之心': 500,
+        '樱的特制便当': 560,
+        '手工图坦饭': 450,
+        '排名第三的礼物': 600,
+        '只不过是饭团': 100,
+        // 日常用品区
+        '黄金☆名流之夜': 5000,
+        '帅气的鲜红色（？）领带': 999,
+        '附智能机变形功能的小为朝': 2000,
+        '秘密秘藏秘宝相册': 10000,
+        '返老还童的灵药': 12000,
+        '夏日力量助威花': 500,
+        // 娱乐商品区
+        '克罗斯碧奇的魔法姬与怪物': 2500,
+        '咱们的圆桌': 600,
+        '『昏暗林中的温柔之雨』': 1200,
+        '反派大小姐想将坏女人彻底打废！': 800,
+        '咖喱×米饭': 750
+    };
+
+    // 获取购物车数据
+    function getCart() {
+        const cartStr = localStorage.getItem(CART_KEY);
+        return cartStr ? JSON.parse(cartStr) : [];
+    }
+    
+    // 保存购物车数据
+    function saveCart(cart) {
+        localStorage.setItem(CART_KEY, JSON.stringify(cart));
+    }
+    
+    // 更新购物车UI（徽章数量和侧边栏）
+    function updateCartUI() {
+        const cart = getCart();
+        const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+        const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        
+        // 更新徽章
+        const badge = document.getElementById('cartBadge');
+        if (badge) {
+            badge.textContent = totalCount;
+            if (totalCount > 0) {
+                badge.style.display = 'flex';
+            } else {
+                badge.style.display = 'none';
+            }
+        }
+        
+        // 更新侧边栏内容
+        updateCartSidebar();
+    }
+    
+    // 更新侧边栏内容
+    function updateCartSidebar() {
+        const cart = getCart();
+        const cartBody = document.getElementById('cartItemsList');
+        const cartFooter = document.getElementById('cartFooter');
+        
+        if (!cartBody) return;
+        
+        if (cart.length === 0) {
+            cartBody.innerHTML = `
+                <div class="cart-empty">
+                    🛍️ 购物车还是空的<br>
+                    快去添加一些商品吧！
+                </div>
+            `;
+            if (cartFooter) cartFooter.style.display = 'none';
+            return;
+        }
+        
+        let html = '';
+        let total = 0;
+        cart.forEach((item, index) => {
+            const itemTotal = item.price * item.quantity;
+            total += itemTotal;
+            html += `
+                <div class="cart-item" data-index="${index}">
+                    <div class="cart-item-info">
+                        <div class="cart-item-name">${item.name}</div>
+                        <div class="cart-item-price">￥${item.price} × ${item.quantity}</div>
+                        <div class="cart-item-total">小计：￥${itemTotal}</div>
+                    </div>
+                    <div class="cart-item-actions">
+                        <button class="cart-item-minus" onclick="updateCartItemQuantity('${item.name}', -1)">-</button>
+                        <span class="cart-item-qty">${item.quantity}</span>
+                        <button class="cart-item-plus" onclick="updateCartItemQuantity('${item.name}', 1)">+</button>
+                        <button class="cart-item-remove" onclick="removeFromCart('${item.name}')">删除</button>
+                    </div>
+                </div>
+            `;
+        });
+        
+        cartBody.innerHTML = html;
+        if (cartFooter) cartFooter.style.display = 'block';
+        
+        // 更新总计
+        const totalPriceEl = document.getElementById('cartTotalPrice');
+        if (totalPriceEl) {
+            totalPriceEl.textContent = '￥' + total;
+        }
+    }
+    
+    // 添加商品到购物车
+    function addToCart(productName, productPrice) {
+        const cart = getCart();
+        const existingItem = cart.find(item => item.name === productName);
+        
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            cart.push({
+                name: productName,
+                price: productPrice,
+                quantity: 1
+            });
+        }
+        
+        saveCart(cart);
+        updateCartUI();
+        showToast(`已添加 ${productName} 到购物车`);
+        
+        // 如果购物车侧边栏是打开的，刷新它
+        const sidebar = document.getElementById('cartSidebar');
+        if (sidebar && sidebar.classList.contains('active')) {
+            updateCartSidebar();
+        }
+    }
+    
+    // 更新商品数量
+    function updateCartItemQuantity(productName, delta) {
+        const cart = getCart();
+        const item = cart.find(item => item.name === productName);
+        
+        if (item) {
+            item.quantity += delta;
+            if (item.quantity <= 0) {
+                // 数量为0时删除商品
+                const index = cart.indexOf(item);
+                cart.splice(index, 1);
+            }
+        }
+        
+        saveCart(cart);
+        updateCartUI();
+        
+        const sidebar = document.getElementById('cartSidebar');
+        if (sidebar && sidebar.classList.contains('active')) {
+            updateCartSidebar();
+        }
+    }
+    
+    // 从购物车移除商品
+    function removeFromCart(productName) {
+        const cart = getCart();
+        const index = cart.findIndex(item => item.name === productName);
+        
+        if (index !== -1) {
+            cart.splice(index, 1);
+            saveCart(cart);
+            updateCartUI();
+            showToast(`已从购物车移除`);
+            
+            const sidebar = document.getElementById('cartSidebar');
+            if (sidebar && sidebar.classList.contains('active')) {
+                updateCartSidebar();
+            }
+        }
+    }
+    
+    // 清空购物车
+    function clearCart() {
+        if (confirm('确定要清空购物车吗？')) {
+            saveCart([]);
+            updateCartUI();
+            showToast('购物车已清空');
+            
+            const sidebar = document.getElementById('cartSidebar');
+            if (sidebar && sidebar.classList.contains('active')) {
+                updateCartSidebar();
+            }
+        }
+    }
+    
+    // 结算
+    function checkout() {
+        const cart = getCart();
+        if (cart.length === 0) {
+            showToast('购物车是空的，先去添加商品吧！');
+            return;
+        }
+        
+        const currentUser = getCurrentUser();
+        if (!currentUser) {
+            showToast('请先登录后再结算');
+            toggleCartSidebar();
+            openLoginModal();
+            return;
+        }
+        
+        // 检查QP是否足够
+        const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        const users = getUsers();
+        const user = users.find(u => u.username === currentUser.username);
+        
+        if (user && user.qp >= total) {
+            // 扣款
+            user.qp -= total;
+            saveUsers(users);
+            
+            // 更新当前用户的QP
+            setCurrentUser({ ...currentUser, qp: user.qp });
+            updateNavAfterLogin(currentUser.username, currentUser.role, user.qp);
+            
+            // 清空购物车
+            saveCart([]);
+            updateCartUI();
+            
+            showToast(`购买成功！消费 ${total} QP，剩余 ${formatQP(user.qp)} QP`);
+            toggleCartSidebar();
+        } else {
+            showToast(`QP不足！需要 ${total} QP，当前 ${formatQP(user?.qp || 0)} QP`);
+        }
+    }
+    
+    // 切换购物车侧边栏
+    function toggleCartSidebar() {
+        const sidebar = document.getElementById('cartSidebar');
+        const overlay = document.getElementById('cartOverlay');
+        
+        if (sidebar.classList.contains('active')) {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        } else {
+            sidebar.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            updateCartSidebar(); // 打开时刷新内容
+        }
+    }
+    
+    // 为所有"加入购物车"按钮绑定事件
+    function bindCartButtons() {
+        // 美食区按钮
+        document.querySelectorAll('.food-menu .order-btn').forEach((btn, index) => {
+            const card = btn.closest('.food-card');
+            const nameEl = card.querySelector('.food-name');
+            if (nameEl) {
+                const productName = nameEl.innerText.replace(/[🔥🌸🍛🌙🍫🍈]/g, '').trim();
+                const price = productPrices[productName] || 0;
+                btn.onclick = (e) => {
+                    e.stopPropagation();
+                    addToCart(productName, price);
+                };
+            }
+        });
+        
+        // 日常用品区按钮
+        document.querySelectorAll('.daily-goods .daily-order-btn').forEach((btn) => {
+            const card = btn.closest('.daily-card');
+            const nameEl = card.querySelector('.daily-name');
+            if (nameEl) {
+                let productName = nameEl.innerText.replace(/[🎬🧊🦅🌸⚗️👊]/g, '').trim();
+                // 特殊处理一些商品名
+                if (productName.includes('出发活动写真馆')) productName = '出发活动写真馆';
+                if (productName.includes('冻得硬邦邦的运动饮料')) productName = '冻得硬邦邦的运动饮料';
+                if (productName.includes('金眼神莺')) productName = '金眼神莺';
+                if (productName.includes('美丽而虚缈之花')) productName = '美丽而虚缈之花';
+                if (productName.includes('返老还童的灵药')) productName = '返老还童的灵药';
+                if (productName.includes('殴打券')) productName = '殴打券';
+                const price = productPrices[productName] || 0;
+                btn.onclick = (e) => {
+                    e.stopPropagation();
+                    addToCart(productName, price);
+                };
+            }
+        });
+        
+        // 娱乐商品区按钮
+        document.querySelectorAll('.entertainment-goods .entertainment-order-btn').forEach((btn) => {
+            const card = btn.closest('.entertainment-card');
+            const nameEl = card.querySelector('.entertainment-name');
+            if (nameEl) {
+                let productName = nameEl.innerText.replace(/[🎮📖📸⚔️🍜]/g, '').trim();
+                if (productName.includes('迦勒底尽享游戏')) productName = '迦勒底尽享游戏～与阿尔托莉雅小姐玩耍～';
+                if (productName.includes('小艾·红豆馅')) productName = '小艾·红豆馅 写真集';
+                if (productName.includes('泡影')) productName = '泡影－Phantasma－莫德雷德写真集';
+                if (productName.includes('阿尔托莉雅梁山泊')) productName = '阿尔托莉雅梁山泊';
+                if (productName.includes('喜欢拉面的阿纳斯塔西娅小姐')) productName = '喜欢拉面的阿纳斯塔西娅小姐';
+                const price = productPrices[productName] || 0;
+                btn.onclick = (e) => {
+                    e.stopPropagation();
+                    addToCart(productName, price);
+                };
+            }
+        });
+    }
+    
+    // 初始化购物车
+    function initCart() {
+        updateCartUI();
+        bindCartButtons();
+    }
+    
+    // 在页面加载完成后初始化购物车
+    document.addEventListener('DOMContentLoaded', function() {
+        initCart();
+    });
+
+    
+    document.addEventListener('DOMContentLoaded', function() {
+            console.log("😈 BB Channel 完全接管成功。垃圾防卫系统已被清除！");
+            
+            // 让粉色跑马灯文字滚动得稍微快一点，制造 BB 酱调皮的感觉
+            const textEl = document.getElementById('announcement-text');
+            if (textEl) {
+                textEl.style.animationDuration = '12s'; 
+            }
+    });
+
+
+    </script>
+</body>
+</html>

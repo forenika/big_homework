@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BB Live - 超规格AI亲的特别情报放送局</title>
+    <link rel="icon" type="image/png" href="images/BB_标志1.png">
+    <link rel="stylesheet" href="css/bb_live.css">
+    <style>
+        /* 确保布局正确 */
+        .live-player-area {
+            position: relative;
+            background: #000;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #live-video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: none;
+        }
+        .video-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #666;
+        }
+        .player-bg-logo {
+            width: 100px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="live-room-container">
+        <div class="live-room-header">
+            <a href="bb_index.html" id="back-to-home-btn">← 返回首页</a>
+            <h2>🔴 【BB Live】超规格AI亲的特别情报放送局</h2>
+        </div>
+        
+        <div class="live-main-content">
+            <!-- 左侧视频区域 -->
+            <div class="live-player-area">
+                <video id="live-video" src="mp4/BB_直播.mp4" preload="auto"></video>
+                <div class="video-placeholder" id="video-placeholder">
+                    <img src="images/BB_标志1.png" alt="Logo" class="player-bg-logo">
+                    <p>📡 直播信号准备中... 请在右侧互动</p>
+                </div>
+            </div>
+            
+            <!-- 右侧聊天区域 -->
+            <div class="live-sidebar">
+                <div class="sidebar-tabs">
+                    <span class="tab-item active">互动弹幕</span>
+                    <span class="tab-item">SuperChat (SC)</span>
+                </div>
+                
+                <div class="chat-display-area" id="chat-box">
+                    <div class="chat-msg system">系统提示：欢迎来到BB直播间，请文明发言。</div>
+                    <div class="chat-msg"><span class="user-name">BB_Official:</span> 各位贵安！能看到大家，BB亲真的很开心噢♡</div>
+                    <div class="chat-msg sc-msg-preview" style="--sc-color: #e91e63;">
+                        <div class="sc-head"><b>前辈白</b> 5000QP</div>
+                        <div class="sc-body">没想到你也开了直播啊，很努力呢，BB</div>
+                    </div>
+                </div>
+                
+                <div class="live-input-panel">
+                    <div class="input-row">
+                        <input type="text" id="danmu-input" placeholder="发条弹幕说些什么吧~" maxlength="30">
+                        <button id="send-danmu-btn">发送</button>
+                    </div>
+                    <div class="gift-row">
+                        <button class="sc-btn" data-amount="30" style="background: #00e5ff;">💰 SC 3000QP</button>
+                        <button class="sc-btn" data-amount="100" style="background: #ffb300;">🔥 SC 10000QP</button>
+                        <button class="sc-btn" data-amount="500" style="background: #e91e63;">💎 SC 50000QP</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatBox = document.getElementById('chat-box');
+            const danmuInput = document.getElementById('danmu-input');
+            const sendDanmuBtn = document.getElementById('send-danmu-btn');
+            
+            // ================= 视频播放逻辑 =================
+            const liveVideo = document.getElementById('live-video');
+            const videoPlaceholder = document.getElementById('video-placeholder');
+
+            if (liveVideo && videoPlaceholder) {
+                // 监听视频开始播放
+                liveVideo.addEventListener('play', function() {
+                    console.log("视频开始播放");
+                    liveVideo.style.display = 'block';
+                    videoPlaceholder.style.display = 'none';
+                });
+                
+                // 视频播放结束后显示占位图
+                liveVideo.addEventListener('ended', function() {
+                    console.log("视频播放完成，显示占位图");
+                    liveVideo.style.display = 'none';
+                    videoPlaceholder.style.display = 'flex';
+                });
+                
+                // 视频加载失败时显示占位图
+                liveVideo.addEventListener('error', function() {
+                    console.log("视频加载失败");
+                    liveVideo.style.display = 'none';
+                    videoPlaceholder.style.display = 'flex';
+                });
+                
+                // 尝试自动播放视频
+                // 先静音尝试播放，避免被浏览器拦截
+                liveVideo.muted = true;
+                liveVideo.play().then(() => {
+                    console.log("视频自动播放成功");
+                    // 播放成功后可以取消静音（可选）
+                    setTimeout(() => { liveVideo.muted = false; }, 1000);
+                }).catch(err => {
+                    console.log("视频自动播放失败，显示占位图", err);
+                    liveVideo.style.display = 'none';
+                    videoPlaceholder.style.display = 'flex';
+                });
+            }
+
+            // ================= 模拟登录状态控制 =================
+            let isLoggedIn = false; 
+
+            const header = document.querySelector('.live-room-header');
+            const testBtn = document.createElement('button');
+            testBtn.style.cssText = "padding: 6px 12px; background: #2f3e46; color: #fff; border: 1px solid #64748b; border-radius: 6px; cursor: pointer; margin-left: auto; font-size: 12px;";
+            testBtn.innerText = "⚙️ 当前状态：游客 (点击切换登录)";
+            header.appendChild(testBtn);
+
+            testBtn.addEventListener('click', function() {
+                isLoggedIn = !isLoggedIn;
+                if (isLoggedIn) {
+                    testBtn.innerText = "✅ 当前状态：已登录 (御主)";
+                    testBtn.style.background = "#2e7d32";
+                } else {
+                    testBtn.innerText = "⚙️ 当前状态：游客 (点击切换登录)";
+                    testBtn.style.background = "#2f3e46";
+                }
+            });
+
+            // 发送普通弹幕
+            function sendDanmu() {
+                const text = danmuInput.value.trim();
+                if (!text) return;
+
+                let userName = "游客A";
+                if (isLoggedIn) {
+                    userName = "藤丸立香 (你)";
+                }
+
+                const msgDiv = document.createElement('div');
+                msgDiv.className = 'chat-msg';
+                msgDiv.innerHTML = `<span class="user-name" style="${!isLoggedIn ? 'color: #a0aec0;' : ''}">${userName}:</span> ${text}`;
+                
+                chatBox.appendChild(msgDiv);
+                danmuInput.value = ''; 
+                chatBox.scrollTop = chatBox.scrollHeight; 
+            }
+
+            sendDanmuBtn.addEventListener('click', sendDanmu);
+            danmuInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') sendDanmu();
+            });
+
+            // 发送 SC (SuperChat)
+            document.querySelectorAll('.sc-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    if (!isLoggedIn) {
+                        const alertDiv = document.createElement('div');
+                        alertDiv.className = 'chat-msg system';
+                        alertDiv.style.color = '#ef4444';
+                        alertDiv.style.fontWeight = 'bold';
+                        alertDiv.innerText = "❌ 提示：游客状态无法发送 SuperChat，请先登录账户！";
+                        chatBox.appendChild(alertDiv);
+                        chatBox.scrollTop = chatBox.scrollHeight;
+                        alert("您当前处于游客状态，请登录后再发表 SuperChat 留言！");
+                        return;
+                    }
+
+                    const amount = this.getAttribute('data-amount');
+                    let color = '#ffb300';
+                    let displayAmount = amount === '30' ? '3000' : (amount === '100' ? '10000' : '50000');
+                    if (amount === '30') color = '#00e5ff';
+                    if (amount === '500') color = '#e91e63';
+
+                    const scDiv = document.createElement('div');
+                    scDiv.className = 'chat-msg sc-msg-preview';
+                    scDiv.style.setProperty('--sc-color', color);
+                    scDiv.innerHTML = `
+                        <div class="sc-head"><b>御主 (你)</b> ${displayAmount} QP</div>
+                        <div class="sc-body">好贵的SC价格！到底想做什么呀，BB亲！</div>
+                    `;
+                    
+                    chatBox.appendChild(scDiv);
+                    chatBox.scrollTop = chatBox.scrollHeight;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
